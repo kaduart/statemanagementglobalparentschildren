@@ -1,0 +1,40 @@
+.smg-list {
+    padding: 10px;
+
+    .smg-list-item {
+        height: 53px;
+        top: 393px;
+        left: 140px;
+        border-radius: 5px;
+        border: 1px solid var(--smg-color-bg-secondary);
+        opacity: 0px;
+        padding: 8px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .smg-list-item-title {
+            font-family: Roboto;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 14.06px;
+            text-align: left;
+        }
+
+        .smg-list-item-content {
+            font-family: Roboto;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 18.75px;
+            text-align: left;
+            color: var(--smg-color-text-secondary);
+        }
+
+        
+    }
+}
+
+img {
+        
+    width: 5%;
+}
