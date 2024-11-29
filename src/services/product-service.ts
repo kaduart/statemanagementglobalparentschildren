@@ -1,11 +1,23 @@
 import { ProductDTO } from "../models/product.model";
 
 export function findByPrice(min: number, max: number): ProductDTO[] {
-    return products
-        .filter((x) => x.price >= min && x.price <= max)
-        .sort((x, y) => x.price - y.price);
-}
+    const filterProduct = products
+        .filter((product: ProductDTO) => {
+            if (min !== 0 && max !== 0) {
 
+                return product.price >= min && product.price <= max;
+            } else if (min !== 0) {
+
+                return product.price >= min;
+            } else if (max !== 0) {
+
+                return product.price <= max;
+            }
+        })
+        .sort((x, y) => x.price - y.price);
+
+    return filterProduct;
+}
 export function getAllProducts() {
     return products;
 }

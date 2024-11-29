@@ -1,8 +1,8 @@
 import './styles.css';
 
-import * as productService from '../../services/product-service';
 import { useContext, useEffect, useState } from 'react';
 import { ProductDTO } from '../../models/product.model';
+import * as productService from '../../services/product-service';
 import { ContextProdutosCount } from '../../utils/contexts/context-produtos';
 import ProductoCard from '../produtoCard';
 
@@ -19,7 +19,6 @@ export default function ListCard({ require }: Props) {
     const { setContextProdutosCount } = useContext(ContextProdutosCount);
 
     useEffect(() => {
-
         if (require !== undefined) {
             const lista = productService.findByPrice(require.precoMin, require.precoMax);
 

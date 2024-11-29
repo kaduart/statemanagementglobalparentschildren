@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import './styles.css';
 
 import { useState } from 'react';
@@ -17,9 +18,8 @@ export default function FilterCard() {
     });
 
 
-    function hanldeOnSubmit(event: any) {
+    function handleOnSubmit(event: any) {
         event.preventDefault();
-
         if (formData) {
             setRequire(formData);
         }
@@ -38,7 +38,7 @@ export default function FilterCard() {
 
             <div className="smg-container">
                 <div className="smh-filter-section">
-                    <form onSubmit={hanldeOnSubmit} className="smg-filter-card">
+                    <form onSubmit={handleOnSubmit} className="smg-filter-card">
                         <h2>Filtrar Produtos</h2>
                         <hr className='smg-hr' />
 
